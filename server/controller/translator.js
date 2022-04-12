@@ -1,7 +1,5 @@
 
 const numLetters = {
-    0: [''],
-    1: [''],
     2: ['a', 'b', 'c'],
     3: ['d', 'e', 'f'],
     4: ['g', 'h', 'i'],
@@ -14,8 +12,7 @@ const numLetters = {
 
 function numToWord(digits) {
     if (!digits.length) return [];
-    const digitsArr = digits.split('')
-    const lettersArr = digitsArr.map(digit => numLetters[digit])
+    const lettersArr = digits.split('').map(digit => numLetters[digit] || [''])
     let combinations = [''];
     for (let i = 0; i < lettersArr.length; i++) {
         let digitLetters = lettersArr[i];
@@ -32,5 +29,6 @@ function numToWord(digits) {
     return combinations
 }
 
+console.log(numToWord('123'));
 
 module.exports = numToWord;
