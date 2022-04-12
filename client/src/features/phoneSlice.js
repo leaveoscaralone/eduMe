@@ -31,7 +31,7 @@ export const phoneSlice = createSlice({
             state.status = 'loading'
         },
         [fetchPhoneWords.fulfilled]: (state, action) => {
-            state.wordList = action.payload;
+            state.wordList = action.payload.join(', ');
             state.status = 'success'
         },
         [fetchPhoneWords.rejected]: (state, action) => {

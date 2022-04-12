@@ -10,23 +10,28 @@ function Phone () {
     const userInput = useSelector(numberInput)
     const output = useSelector(wordList)
 
-    function handleSubmit(e) {
+    function handleClick(e) {
         e.preventDefault()
         dispatch(fetchPhoneWords(userInput))
         console.log(output);
     }
 
     return (
-        <div className="flex flex-col w-screen h-screen divide-y justify-center items-center">
-            <div>{userInput}</div>
+        <div className="flex flex-col items-center justify-center w-screen h-screen bg-gray-200 text-gray-700">
+        <div className="flex flex-col bg-white rounded-md shadow-lg p-12 mt-12 w-2/5 items-center justify-center">
+            <div className="flex flex-col w-full justify-center items-center">
+
+            <div className="flex w-4/5 mb-4 h-10 border-solid border-2 rounded-xl bg-stone-100" >{userInput}</div>
             {rows.map((row, i) => <PhoneRow key={i} rowElements={row} ></PhoneRow>)}
-            <div className="flex flex-row justify-around w-1/5">
-            <button type="submit" onSubmit={handleSubmit} >{"Enter"}</button>
+            </div>
+            <div className="flex flex-row justify-around w-full">
+            <button onClick={handleClick} >{"Enter"}</button>
             <button onClick={() => dispatch(reset())} >{"Clear"}</button>
             </div>
-            <div className="flex w-1/5">
+            <div className="flex w-full h-20 border-solid border-2 border-stone-200 overflow-y-auto rounded-md">
                 <p>{output}</p>
             </div>
+        </div>
         </div>
     )
 }

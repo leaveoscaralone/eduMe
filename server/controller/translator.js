@@ -29,6 +29,5 @@ function numToWord(digits) {
     return combinations
 }
 
-console.log(numToWord('123'));
 
 module.exports = numToWord;
