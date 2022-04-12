@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import phoneReducers from './phone';
+import phoneReducers from './phoneSlice';
 
 export default configureStore({
     reducer: {
