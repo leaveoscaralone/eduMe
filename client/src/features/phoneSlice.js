@@ -15,7 +15,7 @@ export const phoneSlice = createSlice({
     initialState: {
         numberInput: '',
         status: null,
-        result: [],
+        wordList: [],
     },
     reducers: {
         setInput: (state, action) => {
@@ -23,7 +23,7 @@ export const phoneSlice = createSlice({
         },
         reset: (state) => {
             state.numberInput = '';
-            state.result = [];
+            state.wordList = [];
         }
     },
     extraReducers: {
@@ -31,7 +31,7 @@ export const phoneSlice = createSlice({
             state.status = 'loading'
         },
         [fetchPhoneWords.fulfilled]: (state, action) => {
-            state.result = action.payload;
+            state.wordList = action.payload;
             state.status = 'success'
         },
         [fetchPhoneWords.rejected]: (state, action) => {
@@ -40,7 +40,7 @@ export const phoneSlice = createSlice({
     },
 })
 
-export const result = state => state.phone.result;
+export const wordList = state => state.phone.wordList;
 
 export const numberInput = state => state.phone.numberInput;
 
