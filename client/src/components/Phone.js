@@ -24,7 +24,7 @@ function Phone() {
 
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen bg-gray-200 text-gray-700">
-      <div className="flex flex-col bg-white rounded-2xl shadow-lg p-12 mt-12 w-2/5 items-center justify-center">
+      <div className="flex flex-col bg-white rounded-2xl shadow-lg p-12 mt-12 w-96 items-center justify-center">
         <div className="flex flex-col w-full justify-center items-center">
           <div className="flex w-4/5 mb-4 h-14 border-solid border-2 rounded-xl bg-stone-100 items-center justify-center">
             <p className="truncate hover:text-clip" >{userInput ? userInput : "Press Something"}</p>
