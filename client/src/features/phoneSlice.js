@@ -5,7 +5,6 @@ export const fetchPhoneWords = createAsyncThunk(
     'phoneWords/fetchPhoneWords',
     async (number, thunkAPI) => {
         const phoneWords = await Api.getPhoneWords(number)
-        console.log(phoneWords);
         return phoneWords
     }
 )
