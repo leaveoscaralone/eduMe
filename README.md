@@ -10,7 +10,7 @@
 3. `npm run server` (starts the server)
 4. `cd client` (go into the **client** folder)
 5. `npm install`
-6. `npm run start` (runs the app and opens it in your browser, click [here](https://localhost:3000/) if it doesn't open automatically)
+6. `npm run start` (runs the app and opens it in your browser, click [here](http://localhost:3000/) if it doesn't open automatically)
 ---
 ## To do:
 - filter return words to match list of suitable words. (*time constraint*)
